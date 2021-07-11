@@ -1,0 +1,28 @@
+{% load static %}
+
+<html>
+<head>
+	<title>FeedBack Project</title>
+	<link rel="stylesheet" href="{% static 'css/c1.css' %}">
+	<script type= "text/javascript"  src="{% static 'js/j1.js' %}">
+		
+	</script>
+</head>
+<body>
+	<center>
+		<h1>FeedBack Please</h1>
+		<form method="POST" onsubmit="return validate()">
+		{% csrf_token %}
+		<table border="2">
+			{{fm.as_table}}
+		</table>
+		<br>
+		<input type="submit">
+		</form>
+		{{msg}}
+
+	</center>
+</body>
+
+
+</html>

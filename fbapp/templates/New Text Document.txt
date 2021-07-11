@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>FeedBack Project</title>
+	<style> *{font-size:40px;font-family:calibri;}</style>
+</head>
+<body>
+	<center>
+		<h1>FeedBack Please</h1>
+		<form method="POST">
+		{% csrf_token %}
+		<table>
+			{{fm.as_table}}
+		</table>
+		<br>
+		<input type="submit">
+		</form>
+		{{msg}}
+
+	</center>
+</body>
+
+
+</html>
